@@ -336,6 +336,26 @@ The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time vie
 
 ## 👨‍💻 Team
 
+| Member | Role | Responsibilities |
+|--------|------|------------------|
+| **Member A** | 🔌 Embedded Systems | Arduino UNO Q, Temperature & Humidity Sensor, Gas Sensor Integration |
+| **Member B** | 🤖 AI & Computer Vision | AI Model Integration, Person Detection, OpenCV Pipeline |
+| **Member C** | ⚙️ Backend & Integration | Python Backend, WebSocket Server, Data Processing, Device Communication |
+| **Member D** | 📱 Frontend & UI | React Dashboard, Mobile Interface, Real-Time Data Visualization |
+
+---
+
+### 🤝 Collaboration
+
+Our team follows a modular development approach where each member owns a specific component while collaborating closely during system integration.
+
+- 🔌 **Hardware Layer** – Sensor integration and Arduino firmware.
+- 🤖 **AI Layer** – On-device person detection using Snapdragon AI.
+- ⚙️ **Backend Layer** – Data processing, communication, and risk analysis.
+- 📱 **Frontend Layer** – Dashboard design and real-time monitoring interface.
+
+Together, these components create a seamless **offline, AI-powered disaster response system**.
+
 ## 🚀 Future Scope
 
 ## 📜 License
