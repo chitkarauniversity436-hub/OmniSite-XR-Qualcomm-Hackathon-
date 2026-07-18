@@ -24,11 +24,6 @@
 
 ---
 
-## 🌍 Overview
-
-OmniSight-XR is an **offline, AI-powered disaster response system** designed to help rescue teams locate victims and monitor hazardous environments during emergencies such as earthquakes, building collapses, fires, and industrial accidents.
-
-The system combines an **Arduino UNO Q** with environmental sensors, a **Snapdragon X Elite laptop** for on-device AI processing, and a **OnePlus smartphone** for live video streaming and rescue monitoring. All communication happens over a **local Wi-Fi network**, allowing the system to operate even when internet or cellular networks are unavailable.
 
 ## 🌍 Overview
 
