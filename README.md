@@ -63,6 +63,15 @@ Since all communication and AI processing happen **locally**, OmniSight-XR conti
 
 ## ✨ Features
 
+- 🤖 **On-Device AI Detection** – Detects trapped victims using AI accelerated by the Snapdragon X Elite NPU.
+- 🌡️ **Environmental Monitoring** – Continuously monitors temperature, humidity, and hazardous gas levels.
+- 📡 **Offline Communication** – Operates entirely over a local Wi-Fi network with no internet dependency.
+- 📱 **Live Rescue Dashboard** – Displays real-time sensor data, AI detections, and alerts on a mobile device.
+- ⚠️ **Smart Hazard Alerts** – Notifies responders when dangerous environmental conditions are detected.
+- 🔄 **Multi-Device Orchestration** – Seamlessly connects the Arduino, Snapdragon laptop, and smartphone into one coordinated system.
+- ⚡ **Real-Time Processing** – Combines sensor readings and AI detections with low-latency updates.
+- 🧩 **Modular & Scalable Design** – Easily extendable to support additional sensors, drones, or robotic rescue platforms.
+
 ## 🏗 Architecture
 
 ## 🔧 Hardware
