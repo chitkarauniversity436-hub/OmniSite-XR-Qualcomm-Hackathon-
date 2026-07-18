@@ -108,6 +108,7 @@ def compute_risk(s):
     distance = s.get("distance_cm")
     obstacle = s.get("obstacle_detected")
 
+    # CHECK VALUES AND THEN CAL IF SOMETHING IS WRONG AND ACT ACCORDINGLY
     if gas >= GAS_CRITICAL:
         return "CRITICAL"
     if distance is not None and distance != -1 and distance < DISTANCE_CRITICAL_CM and obstacle:
@@ -231,7 +232,7 @@ def video_feed():
                     boundary + b"\r\n"
                     b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n"
                 )
-            time.sleep(0.1)  # ~10fps re-serve rate
+            time.sleep(0.2)  # ~10fps re-serve rate
 
     return app.response_class(
         generate(), mimetype="multipart/x-mixed-replace; boundary=frame"
