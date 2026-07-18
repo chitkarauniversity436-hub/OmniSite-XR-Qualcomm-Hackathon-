@@ -359,7 +359,7 @@ npm run dev
 
 ---
 
-## Arduino
+## Arduino UNO Q
 
 1. Open Arduino IDE
 
