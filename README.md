@@ -1,483 +1,86 @@
-# 🚨 OmniSight-XR 
+<div align="center">
 
-<p align="center">
+# 🚨 OmniSight-XR
 
-**Offline AI-Powered Disaster Response System**
+### Offline AI-Powered Disaster Response System
 
-*Snapdragon Multiverse Hackathon 2026*
+**Built for the Snapdragon Multiverse Hackathon 2026**
 
----
-*"Respond's Faster. Save Lives."*
+*Helping first responders detect victims and hazards in real time — even without internet connectivity.*
 
-
+<p>
+  <img src="https://img.shields.io/badge/Hackathon-Snapdragon%20Multiverse%202026-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Platform-Snapdragon%20X%20Elite-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Edge%20AI-Qualcomm%20AI%20Hub-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-In%20Development-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge" />
 </p>
 
 ---
 
-# 📖 Table of Contents
+**📍 Offline • 🤖 Edge AI • 📱 Multi-Device • 🌐 Local Network • 🚑 Disaster Response**
 
-* [Overview](#-overview)
-* [Problem Statement](#-problem-statement)
-* [Our Solution](#-our-solution)
-* [Key Features](#-key-features)
-* [System Architecture](#-system-architecture)
-* [Hardware Architecture](#-hardware-architecture)
-* [Project Structure](#-project-structure)
-* [Technology Stack](#-technology-stack)
-* [Communication Flow](#-communication-flow)
-* [AI Pipeline](#-ai-pipeline)
-* [Installation Guide](#-installation-guide)
-* [Running the Project](#-running-the-project)
-* [Team Responsibilities](#-team-responsibilities)
-* [Milestones](#-milestones)
-* [Future Scope](#-future-scope)
-* [Screenshots](#-screenshots)
-* [Demo Video](#-demo-video)
-* [License](#-license)
+</div>
 
 ---
 
-# 🌍 Overview
+## 🌍 Overview
 
-OmniSight-XR is an **offline, multi-device disaster response platform** that combines embedded sensing, edge AI and real-time visualization to assist first responders during earthquakes, building collapses, industrial accidents and rescue missions.
+OmniSight-XR is an **offline, AI-powered disaster response system** designed to help rescue teams locate victims and monitor hazardous environments during emergencies such as earthquakes, building collapses, fires, and industrial accidents.
 
-Unlike cloud-based rescue systems, OmniSight-XR works entirely on a **local network**, making it reliable even when internet and cellular infrastructure fail.
+The system combines an **Arduino UNO Q** with environmental sensors, a **Snapdragon X Elite laptop** for on-device AI processing, and a **OnePlus smartphone** for live video streaming and rescue monitoring. All communication happens over a **local Wi-Fi network**, allowing the system to operate even when internet or cellular networks are unavailable.
 
----
+## 🌍 Overview
 
-# ❗ Problem Statement
+**OmniSight-XR** is an **offline AI-powered disaster response system** designed to assist first responders during emergencies such as earthquakes, building collapses, fires, and industrial accidents.
 
-During disasters:
+The system combines **environmental sensors**, **edge AI**, and **real-time communication** to help rescue teams quickly identify hazardous conditions and locate trapped victims without relying on internet connectivity.
 
-* Communication networks often fail.
-* Hazardous environments prevent rescuers from entering safely.
-* Existing rescue robots are expensive.
-* Cloud-based AI systems cannot operate without connectivity.
+It uses an **Arduino UNO Q** to monitor temperature, humidity, and gas levels, a **Snapdragon X Elite laptop** to perform on-device AI inference and coordinate the system, and a **OnePlus smartphone** to stream live video and display rescue information. All devices communicate over a **local Wi-Fi network**, ensuring reliable operation even when cellular and internet services are unavailable.
 
-Rescue teams need an intelligent system capable of operating completely offline while providing real-time situational awareness.
+OmniSight-XR is built with a **modular, scalable architecture**, allowing the sensing unit to be carried by a rescue worker or integrated into future platforms such as drones or autonomous rescue robots.
 
----
+## ❗ Problem
 
-# 💡 Our Solution
+During disasters such as earthquakes, building collapses, fires, and industrial accidents, rescue teams often face limited visibility, hazardous environments, and disrupted communication networks.
 
-OmniSight-XR builds a local rescue ecosystem using three devices.
+Without reliable information, responders may unknowingly enter dangerous areas with toxic gas, extreme temperatures, or unstable conditions, putting both victims and rescuers at risk.
 
-```
-                Camera
-                   │
-                   ▼
-      Surface Laptop (Snapdragon AI)
-                   ▲
-                   │
-Arduino Sensors ───┘
-                   │
-                   ▼
-        OnePlus Mobile Dashboard
-```
+Most existing solutions rely on expensive equipment or cloud connectivity, making them difficult to deploy when internet access is unavailable.
 
-The Arduino collects environmental data.
+There is a need for an affordable, portable, and **offline-first** system that can detect hazards, identify victims, and provide real-time situational awareness to rescue teams.
 
-The Snapdragon laptop performs on-device AI inference.
+## 💡 Solution
 
-The OnePlus phone receives real-time updates through WebSockets.
+OmniSight-XR provides an **offline, AI-powered disaster response platform** that connects multiple devices into a single rescue ecosystem.
 
-No internet required.
+- **Arduino UNO Q** continuously monitors **temperature, humidity, and hazardous gas levels**.
+- **OnePlus smartphone** captures and streams live video of the disaster site.
+- **Snapdragon X Elite laptop** performs **on-device AI person detection**, combines camera and sensor data, and evaluates the overall risk.
+- The processed information is sent to a **live mobile dashboard** over a **local Wi-Fi network**, allowing rescue teams to monitor the situation in real time.
 
----
+Since all communication and AI processing happen **locally**, OmniSight-XR continues to operate even when internet or cellular networks are unavailable, making it reliable for disaster response scenarios.
 
-# ✨ Key Features
+## ✨ Features
 
-## 🔥 Edge AI
+## 🏗 Architecture
 
-* On-device AI inference
-* Qualcomm AI Hub models
-* Snapdragon NPU acceleration
+## 🔧 Hardware
 
----
+## 💻 Tech Stack
 
-## 📡 Offline Communication
+## 📂 Project Structure
 
-* Local Wi-Fi
-* WebSockets
-* Zero cloud dependency
+## 🚀 Quick Start
 
----
-
-## 🌡 Hazard Detection
-
-* Gas Monitoring
-* Temperature Monitoring
-* Live Hazard Alerts
-
----
-
-## 👤 Human Detection
-
-* Camera-based victim detection
-* Live confidence scores
-* Real-time updates
+## 🔄 Workflow
 
----
-
-## 📱 Mobile Dashboard
+## 📱 Dashboard
 
-* Radar View
-* Hazard Indicators
-* AI Detection Cards
-* Live Status
+## 📸 Demo
 
----
+## 👨‍💻 Team
 
-# 🏗 System Architecture
+## 🚀 Future Scope
 
-```
-               Camera Feed
-                    │
-                    ▼
-      +-----------------------------+
-      | Snapdragon Laptop           |
-      |-----------------------------|
-      | AI Model                    |
-      | Detection Engine            |
-      | WebSocket Server            |
-      +-----------------------------+
-             ▲                │
-             │                │
-             │                ▼
-+--------------------+   +----------------------+
-| Arduino UNO Q      |   | OnePlus Dashboard    |
-|--------------------|   |----------------------|
-| Gas Sensor         |   | Live Radar           |
-| Temperature Sensor |   | Hazard Status        |
-| JSON Sender        |   | Detection Cards      |
-+--------------------+   +----------------------+
-```
-
----
-
-# 🔌 Hardware Architecture
-
-| Device           | Purpose          |
-| ---------------- | ---------------- |
-| Arduino UNO Q    | Sensor Node      |
-| Surface Laptop 7 | AI Hub + Backend |
-| OnePlus 15       | Dashboard        |
-
----
-
-# 📂 Project Structure
-
-```
-OmniSight-XR/
-
-│
-├── arduino/
-│   ├── firmware/
-│   ├── sensors/
-│   └── README.md
-│
-├── backend/
-│   ├── ai/
-│   ├── websocket/
-│   ├── api/
-│   ├── models/
-│   ├── utils/
-│   ├── config.py
-│   └── server.py
-│
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── assets/
-│   └── public/
-│
-├── docs/
-│   ├── architecture.png
-│   ├── workflow.png
-│   ├── diagrams/
-│   └── presentation/
-│
-├── assets/
-│   ├── screenshots/
-│   ├── videos/
-│   └── logo/
-│
-├── README.md
-├── LICENSE
-├── requirements.txt
-└── .gitignore
-```
-
----
-
-# 💻 Technology Stack
-
-## Hardware
-
-* Arduino UNO Q
-* Snapdragon X Elite
-* OnePlus 15
-
----
-
-## Backend (Main)
-
-* Python
-* asyncio
-* WebSockets
-
----
-
-## Frontend
-
-* React
-* Vite
-* HTML
-* CSS
-
----
-
-## AI
-
-* Qualcomm AI Hub
-* Snapdragon NPU
-* Pretrained Detection Model
-
----
-
-## Communication
-
-* JSON
-* Local Wi-Fi
-* WebSockets
-
----
-
-# 🔄 Communication Flow
-
-```
-Arduino
-
-↓
-
-Gas + Temperature
-
-↓
-
-JSON Packet
-
-↓
-
-Laptop Backend
-
-↓
-
-AI Detection
-
-↓
-
-Merged Result
-
-↓
-
-WebSocket
-
-↓
-
-Phone Dashboard
-```
-
----
-
-# 🤖 AI Pipeline
-
-```
-Camera
-
-↓
-
-Frame Capture
-
-↓
-
-Qualcomm AI Hub Model
-
-↓
-
-Human Detection
-
-↓
-
-Confidence Score
-
-↓
-
-Merge Sensor Data
-
-↓
-
-Dashboard
-```
-
----
-
-# ⚙ Installation Guide
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-org/OmniSight-XR.git
-
-cd OmniSight-XR
-```
-
----
-
-## Backend
-
-```bash
-cd backend
-
-pip install -r requirements.txt
-
-python server.py
-```
-
----
-
-## Frontend
-
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
----
-
-## Arduino UNO Q
-
-1. Open Arduino IDE
-
-2. Upload firmware
-
-3. Connect Sensors
-
-4. Connect Local Wi-Fi
-
----
-
-# ▶ Running the Project
-
-### Step 1
-
-Start Backend
-
-↓
-
-### Step 2
-
-Power Arduino
-
-↓
-
-### Step 3
-
-Open Mobile Dashboard
-
-↓
-
-### Step 4
-
-Start Camera
-
-↓
-
-### Step 5
-
-View Live Detection
-
----
-
-# 👨‍💻 Team Responsibilities
-
-| Member   | Responsibility            |
-| -------- | ------------------------- |
-| Member A | Embedded System & Sensors |
-| Member B | AI & Computer Vision      |
-| Member C | Backend & Integration     |
-| Member D | Frontend & Dashboard      |
-
----
-
-# 📅 Development Milestones
-
-* [ ] Backend Complete
-* [ ] Arduino Complete
-* [ ] AI Model Running
-* [ ] Dashboard Connected
-* [ ] Full Integration
-* [ ] Demo Ready
-* [ ] README Complete
-
----
-
-# 🚀 Future Scope
-
-* Thermal Camera
-* Autonomous Rover
-* Drone Support
-* 3D Mapping
-* Multiple Sensor Nodes
-* AR Navigation
-* Offline Mesh Networking
-
----
-
-# 📸 Screenshots
-
-```
-/assets/screenshots
-```
-
-* Dashboard
-* Detection
-* Sensor Data
-* Hardware Setup
-
----
-
-# 🎥 Demo Video
-
-```
-Coming Soon
-```
-
----
-
-# 📜 License
-
-MIT License
-
----
-
-# 🙌 Acknowledgements
-
-* Qualcomm Technologies
-* Snapdragon Multiverse Hackathon
-* Qualcomm AI Hub
-* Arduino
-* React
-* Python
-
----
-
-❤️ Why OmniSight-XR?
-
-OmniSight-XR is a smart rescue system built to help first responders during emergencies and disasters. It uses sensors, AI powered by Snapdragon, and offline communication to quickly detect dangers, find victims, and share information—even when there is no internet.
-
-Its modular design makes it flexible. The sensing unit can be mounted on a rover, attached to a drone, or carried by a rescue worker, allowing it to adapt to different rescue situations.
+## 📜 License
