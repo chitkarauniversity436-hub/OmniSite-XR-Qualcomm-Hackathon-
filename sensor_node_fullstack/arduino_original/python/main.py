@@ -55,7 +55,11 @@ def loop():
             Bridge.call("trigger_buzzer", risk == "CRITICAL")
         except Exception as e:
             print("Buzzer Bridge Error:", e)
+            
+    except Exception as e:
+        print("Bridge Error:", e)
 
+    time.sleep(2)
     
 
 App.run(user_loop=loop)
