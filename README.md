@@ -210,8 +210,45 @@ npm run dev
 - Power on the Arduino.
 - Start the phone camera stream.
 - View live sensor data, AI detections, and hazard alerts on the dashboard.
-
 ## 🔄 Workflow
+
+```text
+┌──────────────────────┐
+│   Arduino UNO Q      │
+│ (Temp • Humidity •   │
+│     Gas Sensors)     │
+└──────────┬───────────┘
+           │ Sensor Data
+           ▼
+┌──────────────────────┐
+│ Snapdragon X Elite   │
+│ • AI Person Detection│
+│ • Risk Analysis      │
+│ • Backend Server     │
+└──────────┬───────────┘
+           ▲
+           │ Live Camera Stream
+┌──────────┴───────────┐
+│   OnePlus Phone      │
+│      Camera          │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  Live Dashboard      │
+│ • Victim Detection   │
+│ • Sensor Readings    │
+│ • Hazard Alerts      │
+└──────────────────────┘
+```
+
+### How It Works
+
+1. **Arduino UNO Q** continuously monitors **temperature, humidity, and gas levels**.
+2. **OnePlus smartphone** captures a live video stream of the disaster area.
+3. **Snapdragon X Elite laptop** receives both the sensor data and camera feed.
+4. The laptop performs **AI-based person detection**, analyzes environmental conditions, and calculates the risk level.
+5. The processed information is sent to the **mobile dashboard** in real time over a **local Wi-Fi network**, enabling rescue teams to make faster and safer decisions.
 
 ## 📱 Dashboard
 
