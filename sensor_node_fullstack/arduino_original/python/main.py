@@ -7,7 +7,7 @@ FLASK_URL = "http://10.83.207.93:5000/detections"
 
 session = requests.Session()
 
-def loop():
+
     try:
         temperature = Bridge.call("get_temperature")
         humidity = Bridge.call("get_humidity")
