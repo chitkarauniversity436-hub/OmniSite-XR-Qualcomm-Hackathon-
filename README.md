@@ -358,4 +358,17 @@ Together, these components create a seamless **offline, AI-powered disaster resp
 
 ## 🚀 Future Scope
 
+Although OmniSight-XR is designed as an offline disaster response system, its modular architecture allows it to be extended for more advanced rescue operations in the future.
+
+- 🚁 **Drone Integration** – Deploy drones for aerial surveillance and victim detection in inaccessible areas.
+- 🤖 **Autonomous Rescue Rover** – Mount the sensing unit on a ground rover for remote exploration of hazardous environments.
+- 🌡️ **Thermal Camera Support** – Improve victim detection in smoke, darkness, or low-visibility conditions.
+- 📍 **GPS & Location Tracking** – Share the precise location of detected victims and hazards with rescue teams.
+- 🌐 **Mesh Networking** – Connect multiple sensor nodes to cover larger disaster zones without internet access.
+- 🧠 **Advanced AI Models** – Detect additional hazards such as fire, smoke, structural damage, and emergency equipment.
+- 📊 **Incident History & Analytics** – Store rescue events, sensor readings, and AI detections for post-disaster analysis.
+- 🥽 **AR-Based Navigation** – Guide first responders with augmented reality overlays showing safe routes and victim locations.
+
+> OmniSight-XR is built with scalability in mind, making it adaptable for future smart rescue systems powered by edge AI and multi-device collaboration.
+
 ## 📜 License
