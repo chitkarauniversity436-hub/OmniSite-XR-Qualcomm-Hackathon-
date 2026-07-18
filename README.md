@@ -268,16 +268,16 @@ The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time vie
 
 ```text
 +--------------------------------------------------+
-|              🚨 OmniSight-XR Dashboard            |
+|              🚨 OmniSight-XR Dashboard           |
 +--------------------------------------------------+
-| 👤 Victim Detected       ✅ Yes (96%)             |
+| 👤 Victim Detected       ✅ Yes (96%)            |
 | 🌡️ Temperature          38°C                     |
 | 💧 Humidity             72%                      |
 | ☁️ Gas Level            HIGH                     |
 | ⚠️ Risk Level           🔴 Critical              |
 | 📡 Device Status        🟢 Connected             |
 +--------------------------------------------------+
-|          Live Camera Feed / Detection            |
+|          Live Camera Feed / Detection             |
 +--------------------------------------------------+
 ```
 
