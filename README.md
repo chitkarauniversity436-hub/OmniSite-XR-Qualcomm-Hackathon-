@@ -122,6 +122,39 @@ OmniSight-XR is built using three devices that work together to provide real-tim
 
 ## 📂 Project Structure
 
+```text
+OmniSight-XR/
+│
+├── arduino/                 # Arduino firmware and sensor code
+│   ├── firmware/
+│   └── README.md
+│
+├── backend/                 # Python backend
+│   ├── ai/                  # AI inference modules
+│   ├── api/                 # API & WebSocket handlers
+│   ├── utils/               # Helper functions
+│   ├── models/              # AI models
+│   └── server.py            # Main backend server
+│
+├── frontend/                # React dashboard
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   └── services/
+│   └── package.json
+│
+├── assets/                  # Images, icons, screenshots
+│
+├── docs/                    # Project documentation
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
+
 ## 🚀 Quick Start
 
 ## 🔄 Workflow
