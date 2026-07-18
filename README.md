@@ -39,7 +39,7 @@
 
 # 🌍 Overview
 
-OmniSight-XR is an **offline, multi-device disaster response platform** that combines embedded sensing, edge AI, and real-time visualization to assist first responders during earthquakes, building collapses, industrial accidents, and rescue missions.
+OmniSight-XR is an **offline, multi-device disaster response platform** that combines embedded sensing, edge AI and real-time visualization to assist first responders during earthquakes, building collapses, industrial accidents and rescue missions.
 
 Unlike cloud-based rescue systems, OmniSight-XR works entirely on a **local network**, making it reliable even when internet and cellular infrastructure fail.
 
