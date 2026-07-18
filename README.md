@@ -8,7 +8,7 @@
 
 ---
 
-*"See More. Respond Faster. Save Lives."*
+*"Respond Faster. Save Lives."*
 
 </p>
 
