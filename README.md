@@ -372,3 +372,19 @@ Although OmniSight-XR is designed as an offline disaster response system, its mo
 > OmniSight-XR is built with scalability in mind, making it adaptable for future smart rescue systems powered by edge AI and multi-device collaboration.
 
 ## 📜 License
+
+This project is licensed under the **MIT License**, allowing anyone to use, modify, and distribute the software with proper attribution.
+
+For more details, see the [LICENSE](LICENSE) file.
+
+---
+
+<div align="center">
+
+**Built with ❤️ for the Snapdragon Multiverse Hackathon 2026**
+
+*Empowering first responders with Offline AI, Edge Computing, and Multi-Device Intelligence.*
+
+⭐ If you found this project interesting, consider giving it a **Star** on GitHub!
+
+</div>
