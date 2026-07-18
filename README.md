@@ -285,6 +285,55 @@ The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time vie
 
 ## 📸 Demo
 
+### 🎥 Demo Video
+
+> 📹 **Coming Soon** *(Demo video will be added after the final project implementation.)*
+
+<!-- Replace with your demo video -->
+<!-- https://youtu.be/your-demo-link -->
+
+---
+
+### 📷 Project Demo
+
+#### 1️⃣ Hardware Setup
+- Arduino UNO Q with Temperature, Humidity, and Gas Sensors
+- Snapdragon X Elite Laptop (Central AI Hub)
+- OnePlus Smartphone (Camera & Dashboard)
+
+#### 2️⃣ Live AI Detection
+- Person detected using on-device AI
+- Real-time confidence score
+- Live camera feed
+
+#### 3️⃣ Environmental Monitoring
+- Temperature monitoring
+- Humidity monitoring
+- Gas level detection
+- Hazard alerts
+
+#### 4️⃣ Mobile Dashboard
+- Live sensor readings
+- AI detection results
+- Risk level indicators
+- Device connection status
+
+---
+
+### 📸 Screenshots
+
+| Hardware Setup | Dashboard |
+|----------------|-----------|
+| *Coming Soon* | *Coming Soon* |
+
+| Live Detection | Architecture |
+|----------------|--------------|
+| *Coming Soon* | *Coming Soon* |
+
+---
+
+> **Demo Scenario:** A rescue worker approaches a disaster site with the OnePlus smartphone while the Arduino continuously monitors environmental conditions. The Snapdragon X Elite laptop processes the live camera feed using on-device AI, combines it with sensor data, and instantly displays victim detections, hazard alerts, and environmental readings on the dashboard—all without requiring an internet connection.
+
 ## 👨‍💻 Team
 
 ## 🚀 Future Scope
