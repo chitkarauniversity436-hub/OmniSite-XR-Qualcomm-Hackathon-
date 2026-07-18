@@ -252,6 +252,37 @@ npm run dev
 
 ## 📱 Dashboard
 
+The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time view of the disaster site by combining AI detections and environmental sensor data into a single interface.
+
+### Dashboard Features
+
+- 👤 **Victim Detection** – Displays AI-detected victims with confidence scores.
+- 🌡️ **Temperature Monitoring** – Shows the current temperature.
+- 💧 **Humidity Monitoring** – Displays environmental humidity levels.
+- ☁️ **Gas Detection** – Indicates hazardous gas levels.
+- ⚠️ **Hazard Alerts** – Highlights unsafe conditions using color-coded warnings.
+- 📡 **Connection Status** – Shows the connectivity of all devices.
+- 🕒 **Live Updates** – Refreshes automatically through WebSockets.
+
+### Dashboard Preview
+
+```text
++--------------------------------------------------+
+|              🚨 OmniSight-XR Dashboard            |
++--------------------------------------------------+
+| 👤 Victim Detected       ✅ Yes (96%)             |
+| 🌡️ Temperature          38°C                     |
+| 💧 Humidity             72%                      |
+| ☁️ Gas Level            HIGH                     |
+| ⚠️ Risk Level           🔴 Critical              |
+| 📡 Device Status        🟢 Connected             |
++--------------------------------------------------+
+|          Live Camera Feed / Detection            |
++--------------------------------------------------+
+```
+
+> The dashboard is optimized for mobile devices, enabling rescue teams to monitor hazards and victim detections in real time while operating entirely offline.
+
 ## 📸 Demo
 
 ## 👨‍💻 Team
