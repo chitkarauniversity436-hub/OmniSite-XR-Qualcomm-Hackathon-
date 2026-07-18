@@ -7,7 +7,7 @@
 *Snapdragon Multiverse Hackathon 2026*
 
 ---
-*"Respond Faster. Save Lives."*
+*"Respond's Faster. Save Lives."*
 
 
 </p>
