@@ -98,6 +98,18 @@ B -->|AI Results & Alerts| C
 
 ## 🔧 Hardware
 
+OmniSight-XR is built using three devices that work together to provide real-time disaster monitoring and victim detection.
+
+| Device | Purpose |
+|---------|---------|
+| **Arduino UNO Q** | Collects environmental data from temperature, humidity, and gas sensors. |
+| **Temperature & Humidity Sensor** | Monitors environmental conditions around the disaster site. |
+| **Gas Sensor** | Detects hazardous gases and alerts responders to unsafe conditions. |
+| **OnePlus Smartphone** | Streams live camera footage and displays the rescue dashboard. |
+| **Snapdragon X Elite Laptop** | Acts as the central hub, running AI inference, processing sensor data, and managing communication between devices. |
+
+> **Central Device:** The Snapdragon X Elite laptop is the brain of the system. It receives sensor data from the Arduino, processes the live camera feed using on-device AI, combines both data sources, and sends real-time alerts to the mobile dashboard over a local Wi-Fi network.
+
 ## 💻 Tech Stack
 
 ## 📂 Project Structure
