@@ -72,7 +72,29 @@ Since all communication and AI processing happen **locally**, OmniSight-XR conti
 - ⚡ **Real-Time Processing** – Combines sensor readings and AI detections with low-latency updates.
 - 🧩 **Modular & Scalable Design** – Easily extendable to support additional sensors, drones, or robotic rescue platforms.
 
-## 🏗 Architecture
+## 🏗️ Architecture
+
+OmniSight-XR follows a **multi-device edge computing architecture** where environmental sensors, AI processing, and the user interface run on separate devices while communicating over a **local Wi-Fi network**. This ensures reliable operation even when internet connectivity is unavailable.
+
+```mermaid
+graph LR
+
+A[Arduino UNO Q<br/>Temperature • Humidity • Gas Sensors]
+B[Snapdragon X Elite Laptop<br/>AI Inference • Backend • WebSocket Server]
+C[OnePlus Phone<br/>Camera + Dashboard]
+
+A -->|Sensor Data| B
+C -->|Live Camera Stream| B
+B -->|AI Results & Alerts| C
+```
+
+### Device Responsibilities
+
+| Device | Responsibility |
+|---------|----------------|
+| **Arduino UNO Q** | Collects temperature, humidity, and gas sensor data. |
+| **Snapdragon X Elite Laptop** | Runs AI inference, processes sensor data, calculates risk, and manages communication. |
+| **OnePlus Phone** | Streams live camera feed and displays the rescue dashboard with alerts. |
 
 ## 🔧 Hardware
 
