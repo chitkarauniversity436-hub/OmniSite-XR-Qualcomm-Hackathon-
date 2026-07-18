@@ -1,10 +1,42 @@
-import { useEffect, useState, useRef } from "react";
+/**
+ * ============================================================================
+ * OmniSight-XR Dashboard
+ * ----------------------------------------------------------------------------
+ * Main React dashboard responsible for:
+ *  - Fetching real-time telemetry from the Flask backend
+ *  - Displaying environmental sensor values
+ *  - Showing live camera feed and detected life points
+ *  - Rendering historical sensor charts
+ *
+ * Polling Interval : 2 seconds
+ * Backend API      : Flask REST API
+ * ============================================================================
+ */
+
+// React Hooks
+import { useEffect, useRef, useState } from "react";
+
+// Charts
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
 } from "recharts";
-import { getLatest, getHistory } from "./api";
+
+// API
+import { getHistory, getLatest } from "./api";
+
+// Components
 import LifeMap from "./LifeMap";
 import LiveCamera from "./LiveCamera";
+
+// -----------------------------------------------------------------------------
+// Dashboard State
+// -----------------------------------------------------------------------------
 
 const POLL_MS = 2000;
 
