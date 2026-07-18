@@ -476,13 +476,8 @@ MIT License
 
 ---
 
-# ❤️ Why OmniSight-XR?
+❤️ Why OmniSight-XR?
 
 OmniSight-XR is a smart rescue system built to help first responders during emergencies and disasters. It uses sensors, AI powered by Snapdragon, and offline communication to quickly detect dangers, find victims, and share information—even when there is no internet.
 
-The sensing unit can be mounted on a rover, attached to a drone, or carried by a rescue worker, allowing it to adapt to different rescue situations.
-Its is flexible because it design is modular . 
-
-
-
-OmniSight-XR is designed to assist first responders by combining embedded sensing, Snapdragon-powered edge AI, and offline multi-device communication into a portable rescue platform. Its modular architecture allows the sensing unit to be deployed on a rover, drone, or carried by responders, making it adaptable to a wide range of disaster scenarios while remaining fully operational without internet connectivity. make it more easy understandable
+Its modular design makes it flexible. The sensing unit can be mounted on a rover, attached to a drone, or carried by a rescue worker, allowing it to adapt to different rescue situations.
