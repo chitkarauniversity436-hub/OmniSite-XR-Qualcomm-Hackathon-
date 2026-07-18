@@ -10,7 +10,7 @@ Receives:
 Environmental risk (gas/obstacle/distance) and person detection are tracked
 SEPARATELY — person_status does not affect risk, and vice versa.
 """
-
+# IMPORTED ALL THE LIB
 import sqlite3
 import time
 import threading
@@ -27,6 +27,7 @@ latest_frame = {"bytes": None, "updated_at": None}
 
 # in-memory latest state (fast reads for the dashboard / risk calc)
 state_lock = threading.Lock()
+# STORED ALL THE VALUES TEMP, HUM ADN MORE TO NONE
 latest_state = {
     "temperature": None,
     "humidity": None,
