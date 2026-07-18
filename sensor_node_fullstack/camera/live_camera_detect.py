@@ -21,8 +21,12 @@ from ultralytics import YOLO
 from math import radians, sin, cos, sqrt, atan2
 
 # ---------------------------------------------------------------------------
-# Config
+# Configuration
+# Centralized runtime settings. Keeping these values together makes it easy
+# to tune detection performance, backend communication frequency, and camera
+# settings without modifying the core detection logic.
 # ---------------------------------------------------------------------------
+
 BACKEND_URL = "http://127.0.0.1:5000"
 CAMERA_INDEX = 0
 MODEL_NAME = "yolo11n.pt"
@@ -110,6 +114,8 @@ def main():
 
     gps = MockGPS(MOCK_START_LAT, MOCK_START_LON)
     tracker = LifePointTracker()
+    # Reuse a single HTTP session to reduce connection overhead and improve
+    # communication efficiency with the Flask backend
     session = requests.Session()
 
     last_frame_sent = 0.0
