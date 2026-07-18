@@ -8,7 +8,7 @@
 
 ---
 
-*"Respond Faster. Save Lives."*
+
 
 </p>
 
