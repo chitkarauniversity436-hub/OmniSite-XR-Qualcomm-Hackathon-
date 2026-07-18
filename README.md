@@ -157,6 +157,60 @@ OmniSight-XR/
 
 ## 🚀 Quick Start
 
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/OmniSight-XR.git
+cd OmniSight-XR
+```
+
+### 2️⃣ Install Dependencies
+
+**Backend**
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+**Frontend**
+
+```bash
+cd frontend
+npm install
+```
+
+### 3️⃣ Upload Arduino Firmware
+
+- Open the `arduino/` folder in **Arduino IDE**.
+- Select your **Arduino UNO Q** board and COM port.
+- Upload the firmware.
+
+### 4️⃣ Start the Backend
+
+```bash
+cd backend
+python server.py
+```
+
+### 5️⃣ Start the Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+### 6️⃣ Connect the Devices
+
+- Connect the **Arduino UNO Q**, **Snapdragon X Elite Laptop**, and **OnePlus Phone** to the same local Wi-Fi network.
+- Open the dashboard on your phone using the URL displayed by the frontend.
+
+### 7️⃣ Start Monitoring
+
+- Power on the Arduino.
+- Start the phone camera stream.
+- View live sensor data, AI detections, and hazard alerts on the dashboard.
+
 ## 🔄 Workflow
 
 ## 📱 Dashboard
