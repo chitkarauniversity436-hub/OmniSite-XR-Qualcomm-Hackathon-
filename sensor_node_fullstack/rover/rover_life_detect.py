@@ -14,7 +14,7 @@ Hardware assumed:
 
 pip install ultralytics opencv-python pyserial pynmea2
 """
-
+# IMPORT ALL THE LIB
 import time
 import json
 import serial
@@ -25,6 +25,7 @@ from math import radians, sin, cos, sqrt, atan2
 
 # ---------------------------------------------------------------------------
 # Config
+# CAMERA CHARACTERFICATION
 # ---------------------------------------------------------------------------
 CAMERA_INDEX = 0
 MODEL_NAME = "yolo11n.pt"
@@ -46,11 +47,11 @@ DETECTION_COOLDOWN_SEC = 3.0  # min time between checking for a *new* point, eve
 # ---------------------------------------------------------------------------
 
 class GPSReader:
-    def __init__(self, port, baud):
+    def __init__(self, port, baud):  # SIMPLE CONSTRUCTOR
         self.ser = serial.Serial(port, baud, timeout=1)
         self.last_fix = None  # (lat, lon)
 
-    def read_latest(self):
+    def read_latest(self):  # READ BUFFERED SENTENCES
         """Non-blocking-ish: read whatever NMEA sentences are buffered, keep the latest GGA fix."""
         try:
             while self.ser.in_waiting:
@@ -64,7 +65,7 @@ class GPSReader:
         return self.last_fix
 
 
-def haversine_m(lat1, lon1, lat2, lon2):
+def haversine_m(lat1, lon1, lat2, lon2):  # CAL DISTANCE
     """Distance in meters between two lat/lon points."""
     R = 6371000
     p1, p2 = radians(lat1), radians(lat2)
@@ -79,10 +80,10 @@ def haversine_m(lat1, lon1, lat2, lon2):
 # ---------------------------------------------------------------------------
 
 class LoRaLink:
-    def __init__(self, port, baud):
+    def __init__(self, port, baud):  # SIMPLE CONSTRUC
         self.ser = serial.Serial(port, baud, timeout=2)
 
-    def send(self, payload: dict):
+    def send(self, payload: dict):  # PRINT THE DATA 
         data = json.dumps(payload)
         cmd = f"AT+SEND={LORA_TARGET_ADDR},{len(data)},{data}\r\n"
         self.ser.write(cmd.encode())
