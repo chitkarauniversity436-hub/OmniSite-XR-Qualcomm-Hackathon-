@@ -1,20 +1,43 @@
 """
-YOLOv11 person-detection worker.
+===============================================================================
+OmniSight-XR Vision Node
+-------------------------------------------------------------------------------
+This module performs real-time human detection using the YOLOv11 object
+detection model and synchronizes the detection status with the Flask backend.
 
-Runs on whatever machine has the camera (same PC as Flask, or a Pi/laptop
-on the same network — just change BACKEND_URL below).
+Responsibilities:
+    • Capture live frames from the camera
+    • Perform YOLOv11 inference
+    • Detect human presence
+    • Send detection status to the backend
+    • Display a local annotated preview
 
-Requires: pip install ultralytics opencv-python requests
+Model:
+    YOLOv11 Nano (COCO Pretrained)
 
-First run auto-downloads the pretrained COCO model (yolo11n.pt), which
-already knows how to detect "person" (COCO class 0) — no custom training
-needed unless you want to detect something else.
+Communication:
+    POST /person
+
+Author:
+    OmniSight-XR Team
+===============================================================================
 """
 
+# -----------------------------------------------------------------------------
+# Standard Library
+# -----------------------------------------------------------------------------
 import time
+
+# -----------------------------------------------------------------------------
+# Third-Party Libraries
+# -----------------------------------------------------------------------------
 import cv2
 import requests
 from ultralytics import YOLO
+
+# =============================================================================
+# Runtime Configuration
+# =============================================================================
 
 BACKEND_URL = "http://127.0.0.1:5000/person"  # change to backend's LAN IP if on another device
 CAMERA_INDEX = 0                               # 0 = default webcam
@@ -26,6 +49,18 @@ PERSON_CLASS_ID = 0  # COCO class index for "person"
 
 
 def main():
+    """
+    Main execution loop.
+    
+    Workflow
+    --------
+    1. Initialize camera
+    2. Load YOLO model
+    3. Capture video frames
+    4. Detect people
+    5. Send detection results to Flask
+    6. Display annotated preview
+    """
     model = YOLO(MODEL_NAME)
     cap = cv2.VideoCapture(CAMERA_INDEX)
 
