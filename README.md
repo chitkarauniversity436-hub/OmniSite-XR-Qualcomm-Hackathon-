@@ -211,61 +211,101 @@ sensor_node/
 └── .gitignore
 ```
 
-## 🚀 Quick Start
+- Python 3.10+
+- Node.js (v18+)
+- npm
+- Git
+- A webcam (for AI person detection)
+
+---
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/OmniSight-XR.git
-cd OmniSight-XR
+git clone https://github.com/your-username/sensor_node.git
+cd sensor_node
 ```
 
-### 2️⃣ Install Dependencies
+---
 
-**Backend**
+### 2️⃣ Start the Backend
 
 ```bash
 cd backend
 pip install -r requirements.txt
+python app.py
 ```
 
-**Frontend**
+The backend runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 3️⃣ Start the AI Camera Module
+
+Open a new terminal:
+
+```bash
+cd camera
+pip install ultralytics opencv-python requests
+python live_camera_detect.py
+```
+
+This module:
+- Captures live webcam video.
+- Performs real-time YOLO11 person detection.
+- Streams annotated frames to the backend.
+- Generates mock GPS coordinates for detected life points.
+
+---
+
+### 4️⃣ Start the Sensor Simulator
+
+Open another terminal:
+
+```bash
+cd simulator
+pip install requests
+python simulate_sensors.py
+```
+
+The simulator continuously sends realistic temperature, humidity, gas, distance, and obstacle readings to the backend.
+
+---
+
+### 5️⃣ Start the Frontend
+
+Open another terminal:
 
 ```bash
 cd frontend
 npm install
-```
-
-### 3️⃣ Upload Arduino Firmware
-
-- Open the `arduino/` folder in **Arduino IDE**.
-- Select your **Arduino UNO Q** board and COM port.
-- Upload the firmware.
-
-### 4️⃣ Start the Backend
-
-```bash
-cd backend
-python server.py
-```
-
-### 5️⃣ Start the Frontend
-
-```bash
-cd frontend
 npm run dev
 ```
 
-### 6️⃣ Connect the Devices
+Then open:
 
-- Connect the **Arduino UNO Q**, **Snapdragon X Elite Laptop**, and **OnePlus Phone** to the same local Wi-Fi network.
-- Open the dashboard on your phone using the URL displayed by the frontend.
+```
+http://localhost:5173
+```
 
-### 7️⃣ Start Monitoring
+---
 
-- Power on the Arduino.
-- Start the phone camera stream.
-- View live sensor data, AI detections, and hazard alerts on the dashboard.
+### 6️⃣ View the Dashboard
+
+Once all services are running, you'll see:
+
+- 📹 Live AI camera feed
+- 👤 Person detection with confidence scores
+- 🌡️ Live environmental sensor data
+- ⚠️ Dynamic risk assessment
+- 📍 Life detection map
+- 📊 Historical sensor charts
+
+
 ## 🔄 Workflow
 
 ```text
