@@ -149,16 +149,19 @@ OmniSight-XR is built using three devices that work together to provide real-tim
 
 | Category | Technology |
 |----------|------------|
-| **Programming Languages** | Python, C/C++, JavaScript |
+| **Programming Languages** | Python, JavaScript |
 | **Frontend** | React, Vite, HTML5, CSS3 |
-| **Backend** | Python, `asyncio`, WebSockets |
-| **Computer Vision** | OpenCV |
-| **AI / ML** | Qualcomm AI Hub, Snapdragon NPU, Pre-trained Object Detection Model |
-| **Embedded System** | Arduino UNO Q |
-| **Sensors** | Temperature & Humidity Sensor, Gas Sensor |
-| **Communication** | Local Wi-Fi, JSON, WebSockets |
-| **Development Tools** | Arduino IDE, VS Code, Git, GitHub |
-| **Target Platform** | Snapdragon X Elite Laptop, OnePlus Smartphone |
+| **Backend** | Flask, Flask-CORS |
+| **Database** | SQLite |
+| **AI / Computer Vision** | YOLO11 (Ultralytics), OpenCV |
+| **Machine Learning** | Pre-trained YOLO11 Object Detection Model |
+| **Data Visualization** | Recharts |
+| **Mapping** | React Leaflet, Leaflet, OpenStreetMap |
+| **Communication** | REST APIs, HTTP, MJPEG Video Streaming |
+| **Simulation** | Python Sensor Simulator, Mock GPS |
+| **Development Tools** | VS Code, Git, GitHub, npm, pip |
+| **Deployment Platform** | Local Machine / Edge Device |
+| **Future Hardware Support** | Arduino, GPS Module, LoRa Communication |
 
 ## 📂 Project Structure
 
