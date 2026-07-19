@@ -74,14 +74,18 @@ All communication occurs over a **local network**, allowing the platform to func
 
 ## ✨ Features
 
-- 🤖 **On-Device AI Detection** – Detects trapped victims using AI accelerated by the Snapdragon X Elite NPU.
-- 🌡️ **Environmental Monitoring** – Continuously monitors temperature, humidity, and hazardous gas levels.
-- 📡 **Offline Communication** – Operates entirely over a local Wi-Fi network with no internet dependency.
-- 📱 **Live Rescue Dashboard** – Displays real-time sensor data, AI detections, and alerts on a mobile device.
-- ⚠️ **Smart Hazard Alerts** – Notifies responders when dangerous environmental conditions are detected.
-- 🔄 **Multi-Device Orchestration** – Seamlessly connects the Arduino, Snapdragon laptop, and smartphone into one coordinated system.
-- ⚡ **Real-Time Processing** – Combines sensor readings and AI detections with low-latency updates.
-- 🧩 **Modular & Scalable Design** – Easily extendable to support additional sensors, drones, or robotic rescue platforms.
+- 🤖 **Real-Time AI Person Detection** – Detects people using the YOLO11 object detection model and displays live bounding boxes with confidence scores.
+- 📹 **Live Video Streaming** – Streams annotated webcam footage to the dashboard using an MJPEG video feed for real-time monitoring.
+- 🌡️ **Environmental Monitoring** – Continuously monitors temperature, humidity, gas concentration, distance, and obstacle status.
+- ⚠️ **Intelligent Risk Assessment** – Automatically classifies the environment as **SAFE**, **WARNING**, or **CRITICAL** based on configurable sensor thresholds and AI detection results.
+- 📍 **Life Detection Mapping** – Records detected person locations as map markers using GPS coordinates (Mock GPS for demo, real GPS supported).
+- 📊 **Interactive Dashboard** – Displays live sensor readings, AI detections, risk status, historical charts, and location data in a unified React interface.
+- 🗄️ **Historical Data Storage** – Stores sensor readings and detection history in SQLite for visualization and analysis.
+- 🔄 **REST API Architecture** – Provides well-defined API endpoints for sensor data, AI detections, video streaming, historical records, and map points.
+- 📡 **Offline-First Operation** – Runs entirely over a local network without requiring cloud services or internet connectivity.
+- 🧪 **Built-In Sensor Simulator** – Generates realistic environmental data, enabling full system demonstrations without Arduino hardware.
+- 🔌 **Hardware Ready** – Supports seamless replacement of the simulator with real Arduino sensors, GPS modules, and LoRa communication without modifying the backend or frontend.
+- 🧩 **Modular & Scalable Design** – Independent backend, frontend, AI, and sensing modules simplify development, testing, and future expansion.
 
 ## 🏗️ Architecture
 
