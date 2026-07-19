@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚨 SensorNode
+# 🚨 OmniSite
 
 ### AI-Powered Offline Disaster Monitoring & Victim Detection System
 
