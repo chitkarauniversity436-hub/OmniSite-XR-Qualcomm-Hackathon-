@@ -89,20 +89,40 @@ All communication occurs over a **local network**, allowing the platform to func
 
 ## 🏗️ Architecture
 
-OmniSight-XR follows a **multi-device edge computing architecture** where environmental sensors, AI processing, and the user interface run on separate devices while communicating over a **local Wi-Fi network**. This ensures reliable operation even when internet connectivity is unavailable.
+SensorNode follows a **modular edge-computing architecture** where AI-based person detection, environmental sensing, backend processing, and the user interface run as independent components while communicating through REST APIs over a local network.
+
+This design allows the complete system to run on a single machine for demonstration purposes while remaining fully compatible with future hardware integration such as Arduino sensors, GPS modules, and LoRa communication.
 
 ```mermaid
 graph LR
 
-A[Arduino UNO Q<br/>Temperature • Humidity • Gas Sensors]
-B[Snapdragon X Elite Laptop<br/>AI Inference • Backend • WebSocket Server]
-C[OnePlus Phone<br/>Camera + Dashboard]
+A[Camera Module<br/>YOLO11 + Webcam]
+B[Sensor Simulator<br/>Temperature • Humidity • Gas • Distance]
+C[Flask Backend<br/>REST API • SQLite • Risk Engine]
+D[React Dashboard<br/>Live Camera • Charts • Map]
 
-A -->|Sensor Data| B
-C -->|Live Camera Stream| B
-B -->|AI Results & Alerts| C
+A -->|Annotated Frames| C
+A -->|Person Detection| C
+A -->|Life Detection Point| C
+
+B -->|Sensor Readings| C
+
+C -->|MJPEG Stream| D
+C -->|Latest Status| D
+C -->|History Data| D
+C -->|Map Points| D
 ```
 
+### Device / Module Responsibilities
+
+| Module | Responsibility |
+|---------|----------------|
+| **Camera Module** | Captures webcam video, performs YOLO11 person detection, streams annotated frames, and records life-detection points. |
+| **Sensor Simulator** | Generates realistic temperature, humidity, gas, distance, and obstacle readings for software-only demonstrations. |
+| **Flask Backend** | Receives sensor and AI data, computes risk levels, stores historical records in SQLite, and exposes REST APIs for the dashboard. |
+| **React Dashboard** | Displays the live camera feed, sensor cards, risk status, historical charts, and life-detection map in real time. |
+
+> **Central Hub:** The Flask backend acts as the core of the system. It receives AI detections, sensor readings, and location data, calculates the overall risk level, stores historical information in SQLite, and serves live updates to the React dashboard through REST APIs and MJPEG video streaming.
 ### Device Responsibilities
 
 | Device | Responsibility |
