@@ -390,45 +390,58 @@ The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time vie
 
 ---
 
-### 📷 Project Demo
+## 📷 Project Demo
 
-#### 1️⃣ Hardware Setup
-- Arduino UNO Q with Temperature, Humidity, and Gas Sensors
-- Snapdragon X Elite Laptop (Central AI Hub)
-- OnePlus Smartphone (Camera & Dashboard)
+### 🎥 Demo Video
 
-#### 2️⃣ Live AI Detection
-- Person detected using on-device AI
-- Real-time confidence score
-- Live camera feed
+> 📹 **Coming Soon** *(A complete demonstration video showcasing the full disaster monitoring workflow will be added after final implementation.)*
 
-#### 3️⃣ Environmental Monitoring
-- Temperature monitoring
-- Humidity monitoring
+<!-- Replace with your demo video -->
+<!-- https://youtu.be/your-demo-link -->
+
+---
+
+### 📷 Demonstration
+
+#### 1️⃣ AI Person Detection
+- Live webcam feed processed using **YOLO11**.
+- Real-time person detection with confidence scores.
+- Annotated video streamed directly to the dashboard.
+
+#### 2️⃣ Environmental Monitoring
+- Live temperature monitoring
+- Humidity tracking
 - Gas level detection
-- Hazard alerts
+- Distance and obstacle monitoring
+- Automatic risk level computation
 
-#### 4️⃣ Mobile Dashboard
-- Live sensor readings
-- AI detection results
-- Risk level indicators
-- Device connection status
+#### 3️⃣ Interactive Dashboard
+- Live camera stream
+- Sensor cards with real-time values
+- Risk status (SAFE / WARNING / CRITICAL)
+- Historical sensor charts
+- System status updates
+
+#### 4️⃣ Life Detection Map
+- Displays detected person locations.
+- Mock GPS generates realistic coordinates for demonstration.
+- Interactive map with labeled detection points.
 
 ---
 
 ### 📸 Screenshots
 
-| Hardware Setup | Dashboard |
-|----------------|-----------|
+| Live Camera Feed | Dashboard |
+|------------------|-----------|
 | *Coming Soon* | *Coming Soon* |
 
-| Live Detection | Architecture |
-|----------------|--------------|
+| Sensor Charts | Life Detection Map |
+|----------------|--------------------|
 | *Coming Soon* | *Coming Soon* |
 
 ---
 
-> **Demo Scenario:** A rescue worker approaches a disaster site with the OnePlus smartphone while the Arduino continuously monitors environmental conditions. The Snapdragon X Elite laptop processes the live camera feed using on-device AI, combines it with sensor data, and instantly displays victim detections, hazard alerts, and environmental readings on the dashboard—all without requiring an internet connection.
+> **Demo Scenario:** The AI Camera module captures a live webcam feed and performs real-time person detection using YOLO11. Simultaneously, the Sensor Simulator generates environmental readings such as temperature, humidity, gas concentration, and obstacle distance. The Flask backend processes all incoming data, computes the overall risk level, stores historical records in SQLite, and streams live updates to the React dashboard. The dashboard visualizes the annotated camera feed, sensor values, risk alerts, historical charts, and life-detection points on an interactive map—all operating entirely over a local network without requiring additional hardware.
 
 ## 👨‍💻 Team
 
