@@ -489,7 +489,6 @@ This project is licensed under the **MIT License**, allowing anyone to use, modi
 For more details, see the [LICENSE](LICENSE) file.
 
 ---
-
 <div align="center">
 
 **Built with ❤️ for the Snapdragon Multiverse Hackathon 2026**
