@@ -467,17 +467,6 @@ Together, these components create a unified **offline-first disaster monitoring 
 
 ---
 
-### 🤝 Collaboration
-
-Our team follows a modular development approach where each member owns a specific component while collaborating closely during system integration.
-
-- 🔌 **Hardware Layer** – Sensor integration and Arduino firmware.
-- 🤖 **AI Layer** – On-device person detection using Snapdragon AI.
-- ⚙️ **Backend Layer** – Data processing, communication, and risk analysis.
-- 📱 **Frontend Layer** – Dashboard design and real-time monitoring interface.
-
-Together, these components create a seamless **offline, AI-powered disaster response system**.
-
 ## 🚀 Future Scope
 
 Although OmniSight-XR is designed as an offline disaster response system, its modular architecture allows it to be extended for more advanced rescue operations in the future.
