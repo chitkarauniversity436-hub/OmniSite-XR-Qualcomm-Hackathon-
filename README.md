@@ -42,13 +42,22 @@ The project follows a **modular architecture**, allowing the simulator to be sea
 
 ## ❗ Problem
 
-During disasters such as earthquakes, building collapses, fires, and industrial accidents, rescue teams often face limited visibility, hazardous environments, and disrupted communication networks.
+During disaster response operations such as earthquakes, building collapses, fires, and industrial accidents, first responders often have limited visibility into hazardous environments. Entering these areas without accurate information can expose rescue teams to dangerous conditions such as toxic gases, high temperatures, structural obstacles, and poor visibility.
 
-Without reliable information, responders may unknowingly enter dangerous areas with toxic gas, extreme temperatures, or unstable conditions, putting both victims and rescuers at risk.
+Traditional monitoring systems frequently depend on cloud services, continuous internet connectivity, or expensive specialized equipment. However, communication networks are often disrupted during emergencies, making these solutions unreliable when they are needed most.
 
-Most existing solutions rely on expensive equipment or cloud connectivity, making them difficult to deploy when internet access is unavailable.
+Additionally, rescue teams require a unified view of environmental conditions, live visual information, and victim locations. Existing systems typically provide only isolated sensor readings or camera feeds, forcing responders to manually combine information from multiple sources and slowing critical decision-making.
 
-There is a need for an affordable, portable, and **offline-first** system that can detect hazards, identify victims, and provide real-time situational awareness to rescue teams.
+There is a need for an affordable, offline-first, and real-time disaster monitoring system that can:
+
+- Detect people using AI-powered computer vision.
+- Monitor environmental conditions such as temperature, humidity, gas levels, and nearby obstacles.
+- Stream live annotated video to responders.
+- Mark potential victim locations on a map.
+- Assess risk levels instantly.
+- Continue operating even when internet connectivity is unavailable.
+
+SensorNode addresses these challenges by combining edge AI, real-time sensor monitoring, live video streaming, and location mapping into a single integrated platform designed for disaster response.
 
 ## 💡 Solution
 
