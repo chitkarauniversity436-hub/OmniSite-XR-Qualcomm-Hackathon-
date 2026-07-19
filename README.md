@@ -447,10 +447,23 @@ The **OmniSight-XR Dashboard** provides rescue teams with a clear, real-time vie
 
 | Member | Role | Responsibilities |
 |--------|------|------------------|
-| **Member A** | 🔌 Embedded Systems | Arduino UNO Q, Temperature & Humidity Sensor, Gas Sensor Integration |
-| **Member B** | 🤖 AI & Computer Vision | AI Model Integration, Person Detection, OpenCV Pipeline |
-| **Member C** | ⚙️ Backend & Integration | Python Backend, WebSocket Server, Data Processing, Device Communication |
-| **Member D** | 📱 Frontend & UI | React Dashboard, Mobile Interface, Real-Time Data Visualization |
+| **Member A** | 🤖 AI & Computer Vision | YOLO11 integration, real-time person detection, live video streaming, Mock GPS integration |
+| **Member B** | ⚙️ Backend Developer | Flask REST APIs, SQLite database, risk assessment engine, API integration |
+| **Member C** | 💻 Frontend Developer | React dashboard, live camera feed, sensor visualization, charts, interactive map |
+| **Member D** | 🔧 IoT & Hardware | Arduino integration, sensor communication, GPS & LoRa support, hardware testing |
+
+---
+
+### 🤝 Collaboration
+
+SensorNode was developed using a **modular development approach**, allowing each team member to focus on a specific subsystem while collaborating closely during integration and testing.
+
+- 🤖 **AI Module** – Real-time YOLO11 person detection, frame processing, and life-point generation.
+- ⚙️ **Backend Module** – Flask APIs, SQLite database, risk computation, and data management.
+- 💻 **Frontend Module** – Interactive React dashboard with live video, sensor cards, historical charts, and map visualization.
+- 🔧 **Hardware Module** – Arduino-based sensor integration, GPS support, LoRa communication, and future edge-device deployment.
+
+Together, these components create a unified **offline-first disaster monitoring and victim detection system** capable of assisting emergency responders with real-time situational awareness.
 
 ---
 
