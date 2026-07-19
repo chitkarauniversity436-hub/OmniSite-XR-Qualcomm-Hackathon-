@@ -28,13 +28,17 @@
 
 ## 🌍 Overview
 
-**OmniSight-XR** is an **offline AI-powered disaster response system** designed to assist first responders during emergencies such as earthquakes, building collapses, fires, and industrial accidents.
+**SensorNode** is an **offline AI-powered disaster monitoring and victim detection system** designed to assist rescue teams in hazardous environments where internet connectivity may be unavailable.
 
-The system combines **environmental sensors**, **edge AI**, and **real-time communication** to help rescue teams quickly identify hazardous conditions and locate trapped victims without relying on internet connectivity.
+The system combines **real-time environmental sensing**, **AI-based human detection**, **live video streaming**, and **location mapping** into a unified dashboard that provides situational awareness during emergency response operations.
 
-It uses an **Arduino UNO Q** to monitor temperature, humidity, and gas levels, a **Snapdragon X Elite laptop** to perform on-device AI inference and coordinate the system, and a **OnePlus smartphone** to stream live video and display rescue information. All devices communicate over a **local Wi-Fi network**, ensuring reliable operation even when cellular and internet services are unavailable.
+The backend is built using **Flask** with **SQLite** for lightweight data storage, while a **React dashboard** visualizes live sensor readings, risk levels, AI detections, historical trends, and detected victim locations.
 
-OmniSight-XR is built with a **modular, scalable architecture**, allowing the sensing unit to be carried by a rescue worker or integrated into future platforms such as drones or autonomous rescue robots.
+A **YOLO11 object detection model** running on a webcam identifies people in real time and streams annotated video to the dashboard. Every confirmed detection is stored as a geographic point using a configurable **Mock GPS**, allowing the complete system to be demonstrated without requiring physical GPS hardware.
+
+For demonstrations without embedded hardware, a built-in **sensor simulator** continuously generates realistic temperature, humidity, gas, distance, and obstacle readings. The simulator enables the dashboard, backend, and AI pipeline to function exactly as they would with real sensors.
+
+The project follows a **modular architecture**, allowing the simulator to be seamlessly replaced with real Arduino sensors, GPS modules, and LoRa communication without modifying the backend or frontend. This makes SensorNode suitable for both software demonstrations and real-world disaster response deployments.
 
 ## ❗ Problem
 
