@@ -166,34 +166,47 @@ OmniSight-XR is built using three devices that work together to provide real-tim
 ## 📂 Project Structure
 
 ```text
-OmniSight-XR/
+sensor_node/
 │
-├── arduino/                 # Arduino firmware and sensor code
-│   ├── firmware/
-│   └── README.md
+├── backend/                     # Flask backend and REST APIs
+│   ├── app.py                   # Main backend application
+│   ├── sensor_data.db           # SQLite database (created automatically)
+│   ├── requirements.txt
+│   └── ...
 │
-├── backend/                 # Python backend
-│   ├── ai/                  # AI inference modules
-│   ├── api/                 # API & WebSocket handlers
-│   ├── utils/               # Helper functions
-│   ├── models/              # AI models
-│   └── server.py            # Main backend server
+├── camera/                      # AI camera module
+│   ├── live_camera_detect.py    # YOLO11 person detection & MJPEG streaming
+│   └── ...
 │
-├── frontend/                # React dashboard
+├── simulator/                   # Sensor simulator
+│   ├── simulate_sensors.py      # Generates mock sensor readings
+│   └── ...
+│
+├── frontend/                    # React dashboard
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
+│   │   ├── services/
 │   │   ├── hooks/
-│   │   └── services/
-│   └── package.json
+│   │   └── assets/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── assets/                  # Images, icons, screenshots
+├── rover/                       # Real rover implementation (GPS + LoRa)
+│   ├── rover_life_detect.py
+│   └── ...
 │
-├── docs/                    # Project documentation
+├── base_station/                # LoRa receiver and backend bridge
+│   ├── lora_bridge.py
+│   └── ...
+│
+├── arduino_original/            # Original Arduino firmware and bridge script
+│   ├── sketch/
+│   ├── python/
+│   └── ...
 │
 ├── README.md
-├── requirements.txt
 ├── LICENSE
 └── .gitignore
 ```
