@@ -6,7 +6,7 @@
 
 **Built for the Snapdragon Multiverse Hackathon 2026**
 
-*Real-time environmental monitoring, AI-based human detection, and offline emergency response using Edge AI.*
+*Real-time environmental monitoring, AI-based human detection and offline emergency response using Edge AI.*
 
 <p>
   <img src="https://img.shields.io/badge/Hackathon-Snapdragon%20Multiverse%202026-blue?style=for-the-badge" />
@@ -30,68 +30,68 @@
 
 **OmniSite-XR** is an **offline AI-powered disaster monitoring and victim detection system** designed to assist rescue teams in hazardous environments where internet connectivity may be unavailable.
 
-The system combines **real-time environmental sensing**, **AI-based human detection**, **live video streaming**, and **location mapping** into a unified dashboard that provides situational awareness during emergency response operations.
+The system combines **real-time environmental sensing**, **AI-based human detection**, **live video streaming** and **location mapping** into a unified dashboard that provides situational awareness during emergency response operations.
 
-The backend is built using **Flask** with **SQLite** for lightweight data storage, while a **React dashboard** visualizes live sensor readings, risk levels, AI detections, historical trends, and detected victim locations.
+The backend is built using **Flask** with **SQLite** for lightweight data storage, while a **React dashboard** visualizes live sensor readings, risk levels, AI detections, historical trends and detected victim locations.
 
 A **YOLO11 object detection model** running on a webcam identifies people in real time and streams annotated video to the dashboard. Every confirmed detection is stored as a geographic point using a configurable **Mock GPS**, allowing the complete system to be demonstrated without requiring physical GPS hardware.
 
-For demonstrations without embedded hardware, a built-in **sensor simulator** continuously generates realistic temperature, humidity, gas, distance, and obstacle readings. The simulator enables the dashboard, backend, and AI pipeline to function exactly as they would with real sensors.
+For demonstrations without embedded hardware, a built-in **sensor simulator** continuously generates realistic temperature, humidity, gas, distance and obstacle readings. The simulator enables the dashboard, backend and AI pipeline to function exactly as they would with real sensors.
 
-The project follows a **modular architecture**, allowing the simulator to be seamlessly replaced with real Arduino sensors, GPS modules, and LoRa communication without modifying the backend or frontend. This makes SensorNode suitable for both software demonstrations and real-world disaster response deployments.
+The project follows a **modular architecture**, allowing the simulator to be seamlessly replaced with real Arduino sensors, GPS modules and LoRa communication without modifying the backend or frontend. This makes SensorNode suitable for both software demonstrations and real-world disaster response deployments.
 
 ## ❗ Problem
 
-During disaster response operations such as earthquakes, building collapses, fires, and industrial accidents, first responders often have limited visibility into hazardous environments. Entering these areas without accurate information can expose rescue teams to dangerous conditions such as toxic gases, high temperatures, structural obstacles, and poor visibility.
+During disaster response operations such as earthquakes, building collapses, fires and industrial accidents, first responders often have limited visibility into hazardous environments. Entering these areas without accurate information can expose rescue teams to dangerous conditions such as toxic gases, high temperatures, structural obstacles, and poor visibility.
 
 Traditional monitoring systems frequently depend on cloud services, continuous internet connectivity, or expensive specialized equipment. However, communication networks are often disrupted during emergencies, making these solutions unreliable when they are needed most.
 
-Additionally, rescue teams require a unified view of environmental conditions, live visual information, and victim locations. Existing systems typically provide only isolated sensor readings or camera feeds, forcing responders to manually combine information from multiple sources and slowing critical decision-making.
+Additionally, rescue teams require a unified view of environmental conditions, live visual information and victim locations. Existing systems typically provide only isolated sensor readings or camera feeds, forcing responders to manually combine information from multiple sources and slowing critical decision-making.
 
-There is a need for an affordable, offline-first, and real-time disaster monitoring system that can:
+There is a need for an affordable, offline-first and real-time disaster monitoring system that can:
 
 - Detect people using AI-powered computer vision.
-- Monitor environmental conditions such as temperature, humidity, gas levels, and nearby obstacles.
+- Monitor environmental conditions such as temperature, humidity, gas levels and nearby obstacles.
 - Stream live annotated video to responders.
 - Mark potential victim locations on a map.
 - Assess risk levels instantly.
 - Continue operating even when internet connectivity is unavailable.
 
-SensorNode addresses these challenges by combining edge AI, real-time sensor monitoring, live video streaming, and location mapping into a single integrated platform designed for disaster response.
+SensorNode addresses these challenges by combining edge AI, real-time sensor monitoring, live video streaming and location mapping into a single integrated platform designed for disaster response.
 
 ## 💡 Solution
 
-SensorNode provides an **offline-first, AI-powered disaster monitoring platform** that integrates computer vision, environmental sensing, and real-time visualization into a single system for emergency response.
+SensorNode provides an **offline-first, AI-powered disaster monitoring platform** that integrates computer vision, environmental sensing and real-time visualization into a single system for emergency response.
 
 The system consists of four core components working together over a local network:
 
-- **AI Camera Module** captures live webcam footage and performs **real-time person detection** using the **YOLO11** object detection model. Detected individuals are highlighted with bounding boxes, and their locations are recorded using a configurable **Mock GPS** for demonstration purposes.
-- **Flask Backend** acts as the central hub, receiving live video frames, sensor readings, AI detection results, and location points. It stores historical data in **SQLite**, computes the overall risk level, and exposes REST APIs for the dashboard.
+- **AI Camera Module** captures live webcam footage and performs **real-time person detection** using the **YOLO11** object detection model. Detected individuals are highlighted with bounding boxes and their locations are recorded using a configurable **Mock GPS** for demonstration purposes.
+- **Flask Backend** acts as the central hub, receiving live video frames, sensor readings, AI detection results and location points. It stores historical data in **SQLite**, computes the overall risk level and exposes REST APIs for the dashboard.
 - **Sensor Simulator** continuously generates realistic temperature, humidity, gas, distance, and obstacle readings, enabling the complete system to operate without requiring physical hardware. The simulator can later be replaced by a real Arduino-based sensing unit without changing the backend or frontend.
-- **React Dashboard** provides a real-time monitoring interface displaying the live camera feed, environmental sensor values, AI detection status, risk alerts, historical charts, and a map of detected life locations.
+- **React Dashboard** provides a real-time monitoring interface displaying the live camera feed, environmental sensor values, AI detection status, risk alerts, historical charts and a map of detected life locations.
 
-All communication occurs over a **local network**, allowing the platform to function without internet connectivity. Thanks to its modular architecture, SensorNode can seamlessly transition from a software-only demonstration to a real deployment by replacing the simulator with Arduino sensors, integrating GPS modules, and enabling long-range LoRa communication.
+All communication occurs over a **local network**, allowing the platform to function without internet connectivity. Thanks to its modular architecture, SensorNode can seamlessly transition from a software-only demonstration to a real deployment by replacing the simulator with Arduino sensors, integrating GPS modules and enabling long-range LoRa communication.
 
 ## ✨ Features
 
 - 🤖 **Real-Time AI Person Detection** – Detects people using the YOLO11 object detection model and displays live bounding boxes with confidence scores.
 - 📹 **Live Video Streaming** – Streams annotated webcam footage to the dashboard using an MJPEG video feed for real-time monitoring.
-- 🌡️ **Environmental Monitoring** – Continuously monitors temperature, humidity, gas concentration, distance, and obstacle status.
+- 🌡️ **Environmental Monitoring** – Continuously monitors temperature, humidity, gas concentration, distance and obstacle status.
 - ⚠️ **Intelligent Risk Assessment** – Automatically classifies the environment as **SAFE**, **WARNING**, or **CRITICAL** based on configurable sensor thresholds and AI detection results.
 - 📍 **Life Detection Mapping** – Records detected person locations as map markers using GPS coordinates (Mock GPS for demo, real GPS supported).
-- 📊 **Interactive Dashboard** – Displays live sensor readings, AI detections, risk status, historical charts, and location data in a unified React interface.
+- 📊 **Interactive Dashboard** – Displays live sensor readings, AI detections, risk status, historical charts and location data in a unified React interface.
 - 🗄️ **Historical Data Storage** – Stores sensor readings and detection history in SQLite for visualization and analysis.
 - 🔄 **REST API Architecture** – Provides well-defined API endpoints for sensor data, AI detections, video streaming, historical records, and map points.
 - 📡 **Offline-First Operation** – Runs entirely over a local network without requiring cloud services or internet connectivity.
 - 🧪 **Built-In Sensor Simulator** – Generates realistic environmental data, enabling full system demonstrations without Arduino hardware.
-- 🔌 **Hardware Ready** – Supports seamless replacement of the simulator with real Arduino sensors, GPS modules, and LoRa communication without modifying the backend or frontend.
-- 🧩 **Modular & Scalable Design** – Independent backend, frontend, AI, and sensing modules simplify development, testing, and future expansion.
+- 🔌 **Hardware Ready** – Supports seamless replacement of the simulator with real Arduino sensors, GPS modules and LoRa communication without modifying the backend or frontend.
+- 🧩 **Modular & Scalable Design** – Independent backend, frontend, AI, and sensing modules simplify development, testing and future expansion.
 
 ## 🏗️ Architecture
 
-SensorNode follows a **modular edge-computing architecture** where AI-based person detection, environmental sensing, backend processing, and the user interface run as independent components while communicating through REST APIs over a local network.
+SensorNode follows a **modular edge-computing architecture** where AI-based person detection, environmental sensing, backend processing and the user interface run as independent components while communicating through REST APIs over a local network.
 
-This design allows the complete system to run on a single machine for demonstration purposes while remaining fully compatible with future hardware integration such as Arduino sensors, GPS modules, and LoRa communication.
+This design allows the complete system to run on a single machine for demonstration purposes while remaining fully compatible with future hardware integration such as Arduino sensors, GPS modules and LoRa communication.
 
 ```mermaid
 graph LR
@@ -117,19 +117,19 @@ C -->|Map Points| D
 
 | Module | Responsibility |
 |---------|----------------|
-| **Camera Module** | Captures webcam video, performs YOLO11 person detection, streams annotated frames, and records life-detection points. |
-| **Sensor Simulator** | Generates realistic temperature, humidity, gas, distance, and obstacle readings for software-only demonstrations. |
-| **Flask Backend** | Receives sensor and AI data, computes risk levels, stores historical records in SQLite, and exposes REST APIs for the dashboard. |
-| **React Dashboard** | Displays the live camera feed, sensor cards, risk status, historical charts, and life-detection map in real time. |
+| **Camera Module** | Captures webcam video, performs YOLO11 person detection, streams annotated frames and records life-detection points. |
+| **Sensor Simulator** | Generates realistic temperature, humidity, gas, distance and obstacle readings for software-only demonstrations. |
+| **Flask Backend** | Receives sensor and AI data, computes risk levels, stores historical records in SQLite and exposes REST APIs for the dashboard. |
+| **React Dashboard** | Displays the live camera feed, sensor cards, risk status, historical charts and life-detection map in real time. |
 
-> **Central Hub:** The Flask backend acts as the core of the system. It receives AI detections, sensor readings, and location data, calculates the overall risk level, stores historical information in SQLite, and serves live updates to the React dashboard through REST APIs and MJPEG video streaming.
+> **Central Hub:** The Flask backend acts as the core of the system. It receives AI detections, sensor readings and location data, calculates the overall risk level, stores historical information in SQLite and serves live updates to the React dashboard through REST APIs and MJPEG video streaming.
 ### Device Responsibilities
 
 | Device | Responsibility |
-|---------|----------------|
-| **Arduino UNO Q** | Collects temperature, humidity, and gas sensor data. |
-| **Snapdragon X Elite Laptop** | Runs AI inference, processes sensor data, calculates risk, and manages communication. |
-| **OnePlus Phone** | Streams live camera feed and displays the rescue dashboard with alerts. |
+|--------|----------------|
+| **Arduino UNO Q**       |       Collects temperature, humidity and gas sensor data. |
+| **Snapdragon X Elite Laptop** | Runs AI inference, processes sensor data, calculates risk and manages communication. |
+| **OnePlus Phone**       |        Streams live camera feed and displays the rescue dashboard with alerts. |
 
 ## 🔧 Hardware
 
@@ -137,31 +137,31 @@ OmniSight-XR is built using three devices that work together to provide real-tim
 
 | Device | Purpose |
 |---------|---------|
-| **Arduino UNO Q** | Collects environmental data from temperature, humidity, and gas sensors. |
+| **Arduino UNO Q** | Collects environmental data from temperature, humidity and gas sensors. |
 | **Temperature & Humidity Sensor** | Monitors environmental conditions around the disaster site. |
 | **Gas Sensor** | Detects hazardous gases and alerts responders to unsafe conditions. |
 | **OnePlus Smartphone** | Streams live camera footage and displays the rescue dashboard. |
-| **Snapdragon X Elite Laptop** | Acts as the central hub, running AI inference, processing sensor data, and managing communication between devices. |
+| **Snapdragon X Elite Laptop** | Acts as the central hub, running AI inference, processing sensor data and managing communication between devices. |
 
-> **Central Device:** The Snapdragon X Elite laptop is the brain of the system. It receives sensor data from the Arduino, processes the live camera feed using on-device AI, combines both data sources, and sends real-time alerts to the mobile dashboard over a local Wi-Fi network.
+> **Central Device:** The Snapdragon X Elite laptop is the brain of the system. It receives sensor data from the Arduino, processes the live camera feed using on-device AI, combines both data sources and sends real-time alerts to the mobile dashboard over a local Wi-Fi network.
 
 ## 💻 Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Programming Languages** | Python, JavaScript |
-| **Frontend** | React, Vite, HTML5, CSS3 |
-| **Backend** | Flask, Flask-CORS |
-| **Database** | SQLite |
-| **AI / Computer Vision** | YOLO11 (Ultralytics), OpenCV |
-| **Machine Learning** | Pre-trained YOLO11 Object Detection Model |
-| **Data Visualization** | Recharts |
-| **Mapping** | React Leaflet, Leaflet, OpenStreetMap |
-| **Communication** | REST APIs, HTTP, MJPEG Video Streaming |
-| **Simulation** | Python Sensor Simulator, Mock GPS |
-| **Development Tools** | VS Code, Git, GitHub, npm, pip |
-| **Deployment Platform** | Local Machine / Edge Device |
-| **Future Hardware Support** | Arduino, GPS Module, LoRa Communication |
+| Category                     | Technology                                |
+|------------------------------|-------------------------------------------| 
+| **Programming Languages**    | Python, JavaScript                        |
+| **Frontend**                 | React, Vite, HTML5, CSS3                  |
+| **Backend**                  | Flask, Flask-CORS                         |
+| **Database**                 | SQLite                                    |
+| **AI / Computer Vision**     | YOLO11 (Ultralytics), OpenCV              |
+| **Machine Learning**         | Pre-trained YOLO11 Object Detection Model |
+| **Data Visualization**       | Recharts                                  |
+| **Mapping**                  | React Leaflet, Leaflet, OpenStreetMap     |
+| **Communication**            | REST APIs, HTTP, MJPEG Video Streaming    |
+| **Simulation**               | Python Sensor Simulator, Mock GPS         |
+| **Development Tools**        | VS Code, Git, GitHub, npm, pip            |
+| **Deployment Platform**      | Local Machine / Edge Device               |
+| **Future Hardware Support**  | Arduino, GPS Module, LoRa Communication   |
 
 ## 📂 Project Structure
 
