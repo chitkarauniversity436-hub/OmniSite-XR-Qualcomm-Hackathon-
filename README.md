@@ -1,24 +1,25 @@
 <div align="center">
 
-# 🚨 OmniSight-XR
+# 🚨 SensorNode
 
-### Offline AI-Powered Disaster Response System
+### AI-Powered Offline Disaster Monitoring & Victim Detection System
 
 **Built for the Snapdragon Multiverse Hackathon 2026**
 
-*Helping first responders detect victims and hazards in real time — even without internet connectivity.*
+*Real-time environmental monitoring, AI-based human detection, and offline emergency response using Edge AI.*
 
 <p>
   <img src="https://img.shields.io/badge/Hackathon-Snapdragon%20Multiverse%202026-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Platform-Snapdragon%20X%20Elite-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Edge%20AI-Qualcomm%20AI%20Hub-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-In%20Development-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Flask-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge" />
 </p>
 
 ---
 
-**📍 Offline • 🤖 Edge AI • 📱 Multi-Device • 🌐 Local Network • 🚑 Disaster Response**
+**📡 Offline First • 🤖 Edge AI • 📹 Live Detection • 📍 Location Mapping • 🚑 Disaster Response**
 
 </div>
 
