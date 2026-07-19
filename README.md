@@ -61,14 +61,16 @@ SensorNode addresses these challenges by combining edge AI, real-time sensor mon
 
 ## 💡 Solution
 
-OmniSight-XR provides an **offline, AI-powered disaster response platform** that connects multiple devices into a single rescue ecosystem.
+SensorNode provides an **offline-first, AI-powered disaster monitoring platform** that integrates computer vision, environmental sensing, and real-time visualization into a single system for emergency response.
 
-- **Arduino UNO Q** continuously monitors **temperature, humidity, and hazardous gas levels**.
-- **OnePlus smartphone** captures and streams live video of the disaster site.
-- **Snapdragon X Elite laptop** performs **on-device AI person detection**, combines camera and sensor data, and evaluates the overall risk.
-- The processed information is sent to a **live mobile dashboard** over a **local Wi-Fi network**, allowing rescue teams to monitor the situation in real time.
+The system consists of four core components working together over a local network:
 
-Since all communication and AI processing happen **locally**, OmniSight-XR continues to operate even when internet or cellular networks are unavailable, making it reliable for disaster response scenarios.
+- **AI Camera Module** captures live webcam footage and performs **real-time person detection** using the **YOLO11** object detection model. Detected individuals are highlighted with bounding boxes, and their locations are recorded using a configurable **Mock GPS** for demonstration purposes.
+- **Flask Backend** acts as the central hub, receiving live video frames, sensor readings, AI detection results, and location points. It stores historical data in **SQLite**, computes the overall risk level, and exposes REST APIs for the dashboard.
+- **Sensor Simulator** continuously generates realistic temperature, humidity, gas, distance, and obstacle readings, enabling the complete system to operate without requiring physical hardware. The simulator can later be replaced by a real Arduino-based sensing unit without changing the backend or frontend.
+- **React Dashboard** provides a real-time monitoring interface displaying the live camera feed, environmental sensor values, AI detection status, risk alerts, historical charts, and a map of detected life locations.
+
+All communication occurs over a **local network**, allowing the platform to function without internet connectivity. Thanks to its modular architecture, SensorNode can seamlessly transition from a software-only demonstration to a real deployment by replacing the simulator with Arduino sensors, integrating GPS modules, and enabling long-range LoRa communication.
 
 ## ✨ Features
 
