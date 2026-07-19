@@ -48,15 +48,31 @@ Right now this part runs with a webcam and simulated sensors, so anyone can test
 ---
 
 ## How It All Fits Together
-Phones (DisasterMesh) <-- mesh network --> People on the ground
-|
-Ground Station (OmniSight-XR)
-Camera + AI --> Flask Backend --> React Dashboard
-Sensors --> |
+
+Phones (DisasterMesh) <-- mesh network --> People on the ground  
+\|  
+Ground Station (OmniSight-XR)  
+Camera + AI --> Flask Backend --> React Dashboard  
+Sensors --> \|  
 SQLite storage
 
-
 The mobile app keeps people connected to each other during the disaster. The ground station watches the physical site and finds people automatically. Both are designed to work without any internet connection.
+
+---
+
+## Project Structure
+
+```text
+📁 OmniSight-XR/
+├── 📁 backend/           # Flask API, SQLite storage, risk level logic
+├── 📁 camera/            # Webcam + YOLO11 person detection + mock GPS
+├── 📁 simulator/         # Fake sensor data generator for local testing
+├── 📁 frontend/          # React dashboard (live feed, sensor cards, map, charts)
+├── 📁 rover/             # Rover-side GPS + LoRa code for field hardware
+├── 📁 base_station/      # Base-station LoRa receiver and bridge scripts
+├── 📁 arduino_original/  # Original Arduino sketch + Python bridge
+└── 📄 README.md          # This file
+```
 
 ---
 
