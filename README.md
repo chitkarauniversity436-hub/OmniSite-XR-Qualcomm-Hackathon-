@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚨 OmniSite
+# 🚨 OmniSite XR
 
 ### AI-Powered Offline Disaster Monitoring & Victim Detection System
 
