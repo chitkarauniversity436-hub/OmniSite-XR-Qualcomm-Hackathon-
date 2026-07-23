@@ -1,14 +1,26 @@
+<div align="center">
+
 # 🚨 OmniSight-XR (DisasterMesh)
 
-> Offline disaster monitoring and emergency mesh network — built for places where the internet and cell towers are gone.
+### **Offline AI-Powered Disaster Response & Emergency Mesh Network**
 
-**Built for the Snapdragon Multiverse Hackathon 2026**
+**🌍 Built for the Snapdragon Multiverse Hackathon 2026**
 
-![Platform](https://img.shields.io/badge/Platform-Android%20%2B%20Web-green)
-![Language](https://img.shields.io/badge/Language-Kotlin%20%2F%20Python%20%2F%20JS-orange)
-![License](https://img.shields.io/badge/License-MIT-blue)
+*"When networks fail, OmniSight-XR keeps responders connected and informed."*
 
 ---
+
+![Platform](https://img.shields.io/badge/Platform-Android%20%2B%20Web-34A853?style=for-the-badge)
+![Edge AI](https://img.shields.io/badge/Edge%20AI-Snapdragon%20X%20Elite-0078D4?style=for-the-badge)
+![Hardware](https://img.shields.io/badge/Hardware-Arduino%20UNO%20Q-orange?style=for-the-badge)
+![Language](https://img.shields.io/badge/Languages-Kotlin%20%7C%20Python%20%7C%20JavaScript-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+
+---
+
+### ⚡ Detect Hazards • Find Victims • Stay Connected • Work Offline
+
+</div>
 
 ## What This Is
 
